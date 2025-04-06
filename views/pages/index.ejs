@@ -15,10 +15,10 @@
             <h1>Top Mascots</h1>
             <p><%= tagline %></p>
             <ul>
-                <% mascots.forEach(function(mascot) { %>
+                <% mascots.forEach(function(mascots) { %>
                     <li>
-                        <strong><%= mascot.name %></strong>
-                        representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                        <strong><%= mascots.name %></strong>
+                        difficulty <%= mascots.difficulty %>
                     </li>
                 <% }); %>
             </ul>
@@ -28,6 +28,20 @@
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
-
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Our Escape Rooms</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/room1.jpg" class="img-fluid rounded shadow-sm" alt="Room 1">
+          </div>
+          <div class="col-md-4">
+            <img src="images/room2.jpg" class="img-fluid rounded shadow-sm" alt="Room 2">
+          </div>
+          <div class="col-md-4">
+            <img src="images/room3.jpg" class="img-fluid rounded shadow-sm" alt="Room 3">
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>

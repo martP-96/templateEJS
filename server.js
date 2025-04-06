@@ -1,6 +1,7 @@
 // load the things we need
 var express = require('express');
 var app = express();
+app.use(express.static('public'));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -10,9 +11,9 @@ app.set('view engine', 'ejs');
 // index page 
 app.get('/', function(req, res) {
     var mascots = [
-        { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
-        { name: 'Tuxedo', organization: "Linux", birth_year: 1996},
-        { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
+        { name: 'SCP Foundation Escape', difficulty:'3/10', birth_year: 2012},
+        { name: 'Eery Basement Escape', difficulty:'6/10', birth_year: 1996},
+        { name: 'Ikea', difficulty:'11/10', birth_year: 2013}
     ];
     var tagline = "No programming concept is complete without a cute animal mascot.";
 
@@ -26,6 +27,7 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('pages/about');
 });
+
 
 app.listen(8080);
 console.log('8080 is the magic port');
