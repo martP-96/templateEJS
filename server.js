@@ -9,11 +9,11 @@ app.set('view engine', 'ejs');
 // use res.render to load up an ejs view file
 
 // index page 
-app.get('/index', function(req, res) {
+app.get('/', function(req, res) {
     var mascots = [
-        { name: 'SCP Foundation Escape', difficulty:'3/10', birth_year: 2012},
-        { name: 'Eery Basement Escape', difficulty:'6/10', birth_year: 1996},
-        { name: 'Ikea', difficulty:'11/10', birth_year: 2013}
+        { name: 'SCP Foundation Escape', difficulty:"3/10", birth_year: 2012},
+        { name: 'Eery Basement Escape', difficulty:"6/10", birth_year: 1996},
+        { name: 'Ikea', difficulty:"11/10", birth_year: 2013}
     ];
     var tagline = "Here are our featured rooms!";
 
@@ -23,10 +23,8 @@ app.get('/index', function(req, res) {
     });
 });
 app.use(express.static('public'));
-// about page
-app.get('/about', function(req, res) {
-    res.render('pages/about');
-});
+
+
 
 
 app.listen(8080);
