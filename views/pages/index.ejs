@@ -4,31 +4,34 @@
     <%- include('../partials/head');%>
 
 </head>
-<body class="container">
+<body class="container bg-dark text-white">
 
     <header>
         <%- include('../partials/header'); %>
     </header>
 
     <main>
-        <div class="jumbotron">
-            <h1>Top Mascots</h1>
-            <p><%= tagline %></p>
+        <div class="jumbotron bg-dark">
+            <h1>Escape Rooms</h1>
+            <p>Our escape rooms feature varying difficulties for players of all experience levels. "Step into a world where every second counts and every clue brings you closer to freedom. Our escape rooms are designed to test your wit, teamwork, and nerves—will you solve the mystery before time runs out?"</p>
             <ul>
-                <% mascots.forEach(function(mascot) { %>
                     <li>
-                        <strong><%= mascot.name %></strong>
-                        difficulty <%= mascot.difficulty %>
+                        <strong>SCP Foundation Security Room</strong>
+                        Difficulty: 3/10
                     </li>
-                <% }); %>
+                    <li>
+                        <strong>Eerie Basement Escape</strong>
+                        Difficulty: 5/10
+                    </li>
+                    <li>
+                        <strong>Ikea</strong>
+                        Difficulty: 11/10
+                    </li>
             </ul>
         </div>
     </main>
-
-    <footer>
-        <%- include('../partials/footer'); %>
-    </footer>
-    <div class="container my-5">
+<!--List of escape rooms to choose from-->
+    <div class="container my-5 bg-dark text-white">
         <h2 class="text-center mb-4">Our Escape Rooms</h2>
         <div class="row">
           <div class="col-md-4">
@@ -38,10 +41,52 @@
             <img src="https://cdn.discordapp.com/attachments/1148659945177354270/1358562200784076972/room2.jpg?ex=67f44b25&is=67f2f9a5&hm=c63dcfc76fdeff395feffbe6d4a3c7377a08f5b7606a3ef7ff48689547296d9e&" class="img-fluid rounded shadow-sm" alt="Room 2">
           </div>
           <div class="col-md-4">
-            <img src="https://cdn.discordapp.com/attachments/1148659945177354270/1358562201257906316/room3.jpg?ex=67f44b25&is=67f2f9a5&hm=6ad7e04abc0ff87f33bcc4f463fcbbec23b6c0f3a283324faadab7c0d5406bea&" class="img-fluid rounded shadow-sm" alt="Room 4">
+            <img src="https://cdn.discordapp.com/attachments/1148659945177354270/1358562201257906316/room3.jpg?ex=67f44b25&is=67f2f9a5&hm=6ad7e04abc0ff87f33bcc4f463fcbbec23b6c0f3a283324faadab7c0d5406bea&" class="img-fluid rounded shadow-sm" alt="Room 3">
           </div>
         </div>
       </div>
+
+       <div class="container bg-dark text-white">
+    <h2 class="text-center mb-4">Escape Room Reservation</h2>
+    <form>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="mb-3">
+        <label for="reservationDate" class="form-label">Date of Reservation</label>
+        <input type="date" class="form-control" id="reservationDate">
+      </div>
+
+      <div class="mb-4">
+        <label for="roomChoice" class="form-label">Choose a Room</label>
+        <select class="form-select" id="roomChoice">
+          <option selected disabled>Choose...</option>
+          <option value="scp">SCP Foundation Escape</option>
+          <option value="basement">Eery Basement Escape</option>
+          <option value="ikea">IKEA Escape</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+    </form>
+  </div>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+   
       
 </body>
 </html>
