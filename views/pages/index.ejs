@@ -71,12 +71,12 @@
 
       <div class="mb-4">
         <label for="roomChoice" class="form-label">Choose a Room</label>
-        <select class="form-select" id="roomChoice">
-          <option selected disabled>Choose...</option>
-          <option value="scp">SCP Foundation Escape</option>
-          <option value="basement">Eery Basement Escape</option>
-          <option value="ikea">IKEA Escape</option>
-        </select>
+    <input list="rooms" class="form-control" id="roomChoice" placeholder="Select or type a room">
+    <datalist id="rooms">
+      <option value="SCP Foundation Escape">
+      <option value="Eery Basement Escape">
+      <option value="Ikea">
+    </datalist>
       </div>
 
       <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
